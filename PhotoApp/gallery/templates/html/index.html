@@ -1,0 +1,11 @@
+{% if all_albums %}
+	<h2>Photo albums:</h2>
+	<ul>
+		{% for album in all_albums %}
+			<li><a href="/gallery/{{ album.id }}/">{{ album.albumName }}</a></li>
+		{% endfor %}
+	</ul>
+
+{% else %}
+	<h3>No albums to display!</h3>
+{% endif %}
